@@ -1,0 +1,79 @@
+@use "../../scss/variables";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px 40px 70px;
+  border-bottom: 1px solid #f6f6f6;
+}
+
+.logoWrap {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logoText {
+  h1 {
+    color: #181818;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.24px;
+    text-transform: uppercase;
+  }
+  p {
+    color: #7b7b7b;
+    font-size: 16px;
+  }
+}
+
+.cartWrap {
+  background-color: variables.$accent;
+  border-radius: 30px;
+  min-width: 150px;
+
+  padding: 15px 24px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  transition: background-color 250ms ease-in-out;
+
+  div {
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  .cartIconWrap {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &:hover {
+    background-color: darken(variables.$accent, 8%);
+  }
+  &:active {
+    background-color: darken(variables.$accent, 12%);
+    transform: scale(98%);
+  }
+}
